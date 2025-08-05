@@ -25,54 +25,8 @@
         </div>
     </div>
 
-    <!-- Navbar (incluido directamente) -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="../../index.html" class="logo-link">
-                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
-            </a>
-        </div>
-
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-            <li><a href="../../index.html">Inicio</a></li>
-            <li class="dropdown">
-                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/nosotros/historia.html">Historia</a></li>
-                    <li><a href="../../pages/nosotros/mision-vision.html">Misión y Visión</a></li>
-                    <li><a href="../../pages/nosotros/autoridades.html">Autoridades</a></li>
-                    <li><a href="../../pages/nosotros/cuadro-honor.html">Cuadro de Honor</a></li>
-                </ul>
-            </li>
-            <li class="dropdown active">
-                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/estudiantes/admisiones.html" class="active">Admisiones</a></li>
-                    <li><a href="../../pages/estudiantes/actividades.html">Actividades</a></li>
-                    <li><a href="../../pages/estudiantes/calendario.html">Calendario</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/padres/circulares.html">Circulares</a></li>
-                    <li><a href="../../pages/padres/tutorias.html">Tutorías</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/docentes/plana-docente.html">Plana Docente</a></li>
-                    <li><a href="../../pages/docentes/recursos.html">Recursos</a></li>
-                    <li><a href="../../pages/docentes/capacitaciones.html">Capacitaciones</a></li>
-                </ul>
-            </li>
-            <li><a href="../../pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- Navbar (cargado desde fragmento) -->
+    <div id="navbar-container"></div>
 
     <!-- Contenido Principal -->
     <main class="page-content">
