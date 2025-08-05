@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de fotos y videos de la Unidad Educativa San Francisco de Ibarra, Ecuador">
+    <meta name="keywords" content="galería, fotos, videos, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Galería - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar Actualizado -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="nosotros/historia.html">Historia</a></li>
+                    <li><a href="nosotros/mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="nosotros/autoridades.html">Autoridades</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="estudiantes/admisiones.html">Admisiones</a></li>
+                    <li><a href="estudiantes/actividades.html">Actividades</a></li>
+                    <li><a href="estudiantes/calendario.html">Calendario</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="padres/circulares.html">Circulares</a></li>
+                    <li><a href="padres/tutorias.html">Tutorías</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="docentes/plana-docente.html">Plana Docente</a></li>
+                    <li><a href="docentes/recursos.html">Recursos</a></li>
+                    <li><a href="docentes/capacitaciones.html">Capacitaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li class="active"><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Galería</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li class="active">Galería</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-categories">
+                        <span>Filtrar por:</span>
+                        <button class="filter-button active" data-filter="all">Todos</button>
+                        <button class="filter-button" data-filter="academic">Académico</button>
+                        <button class="filter-button" data-filter="cultural">Cultural</button>
+                        <button class="filter-button" data-filter="sports">Deportes</button>
+                        <button class="filter-button" data-filter="infrastructure">Infraestructura</button>
+                        <button class="filter-button" data-filter="video">Videos</button>
+                    </div>
+                    <div class="year-filter">
+                        <label for="year-select">Año:</label>
+                        <select id="year-select">
+                            <option value="all">Todos</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-featured">
+            <div class="container">
+                <h2>Momentos Destacados</h2>
+                <div class="featured-gallery-slider">
+                    <div class="featured-slide">
+                        <img src="../assets/images/placeholder-gallery-1.jpg" alt="Ceremonia de graduación 2025">
+                        <div class="slide-caption">
+                            <h3>Ceremonia de Graduación 2025</h3>
+                            <p>Celebrando los logros de nuestra promoción más reciente</p>
+                        </div>
+                    </div>
+                    <div class="featured-slide">
+                        <img src="../assets/images/placeholder-gallery-2.jpg" alt="Campeonato intercolegial de fútbol">
+                        <div class="slide-caption">
+                            <h3>Campeonato Intercolegial de Fútbol</h3>
+                            <p>Nuestro equipo se coronó campeón por tercer año consecutivo</p>
+                        </div>
+                    </div>
+                    <div class="featured-slide">
+                        <img src="../assets/images/placeholder-gallery-3.jpg" alt="Festival de artes escénicas">
+                        <div class="slide-caption">
+                            <h3>Festival de Artes Escénicas</h3>
+                            <p>Talento y creatividad en nuestro festival anual</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button id="prev-slide" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button id="next-slide" aria-label="Siguiente slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-grid">
+            <div class="container">
+                <h2>Fotografías</h2>
+                <div class="photo-grid">
+                    <!-- Académico -->
+                    <div class="gallery-item" data-category="academic" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-4.jpg" data-lightbox="gallery" data-title="Feria de Ciencias 2025">
+                            <img src="../assets/images/placeholder-gallery-4.jpg" alt="Feria de Ciencias 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Feria de Ciencias</h3>
+                                    <p>Mayo 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="academic" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-5.jpg" data-lightbox="gallery" data-title="Concurso de Matemáticas 2025">
+                            <img src="../assets/images/placeholder-gallery-5.jpg" alt="Concurso de Matemáticas 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Concurso de Matemáticas</h3>
+                                    <p>Abril 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="academic" data-year="2024">
+                        <a href="../assets/images/placeholder-gallery-6.jpg" data-lightbox="gallery" data-title="Laboratorio de Química 2024">
+                            <img src="../assets/images/placeholder-gallery-6.jpg" alt="Laboratorio de Química 2024">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Laboratorio de Química</h3>
+                                    <p>Noviembre 2024</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Cultural -->
+                    <div class="gallery-item" data-category="cultural" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-7.jpg" data-lightbox="gallery" data-title="Festival de Danza 2025">
+                            <img src="../assets/images/placeholder-gallery-7.jpg" alt="Festival de Danza 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Festival de Danza</h3>
+                                    <p>Junio 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="cultural" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-8.jpg" data-lightbox="gallery" data-title="Coro Escolar 2025">
+                            <img src="../assets/images/placeholder-gallery-8.jpg" alt="Coro Escolar 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Coro Escolar</h3>
+                                    <p>Mayo 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="cultural" data-year="2024">
+                        <a href="../assets/images/placeholder-gallery-9.jpg" data-lightbox="gallery" data-title="Exposición de Arte 2024">
+                            <img src="../assets/images/placeholder-gallery-9.jpg" alt="Exposición de Arte 2024">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Exposición de Arte</h3>
+                                    <p>Diciembre 2024</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Deportes -->
+                    <div class="gallery-item" data-category="sports" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-10.jpg" data-lightbox="gallery" data-title="Equipo de Baloncesto 2025">
+                            <img src="../assets/images/placeholder-gallery-10.jpg" alt="Equipo de Baloncesto 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Equipo de Baloncesto</h3>
+                                    <p>Julio 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="sports" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-11.jpg" data-lightbox="gallery" data-title="Competencia de Atletismo 2025">
+                            <img src="../assets/images/placeholder-gallery-11.jpg" alt="Competencia de Atletismo 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Competencia de Atletismo</h3>
+                                    <p>Abril 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="sports" data-year="2024">
+                        <a href="../assets/images/placeholder-gallery-12.jpg" data-lightbox="gallery" data-title="Torneo de Voleibol 2024">
+                            <img src="../assets/images/placeholder-gallery-12.jpg" alt="Torneo de Voleibol 2024">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Torneo de Voleibol</h3>
+                                    <p>Octubre 2024</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Infraestructura -->
+                    <div class="gallery-item" data-category="infrastructure" data-year="2025">
+                        <a href="../assets/images/placeholder-gallery-13.jpg" data-lightbox="gallery" data-title="Nuevo Laboratorio de Informática 2025">
+                            <img src="../assets/images/placeholder-gallery-13.jpg" alt="Nuevo Laboratorio de Informática 2025">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Nuevo Laboratorio de Informática</h3>
+                                    <p>Marzo 2025</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="infrastructure" data-year="2024">
+                        <a href="../assets/images/placeholder-gallery-14.jpg" data-lightbox="gallery" data-title="Biblioteca Renovada 2024">
+                            <img src="../assets/images/placeholder-gallery-14.jpg" alt="Biblioteca Renovada 2024">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Biblioteca Renovada</h3>
+                                    <p>Septiembre 2024</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="infrastructure" data-year="2023">
+                        <a href="../assets/images/placeholder-gallery-15.jpg" data-lightbox="gallery" data-title="Canchas Deportivas 2023">
+                            <img src="../assets/images/placeholder-gallery-15.jpg" alt="Canchas Deportivas 2023">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Canchas Deportivas</h3>
+                                    <p>Julio 2023</p>
+                                </div>
+                                <div class="gallery-icon">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="load-more">
+                    <button id="load-more-photos" class="load-more-button">Cargar más fotos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-gallery">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="video-grid">
+                    <div class="video-item" data-category="video" data-year="2025">
+                        <div class="video-thumbnail">
+                            <img src="../assets/images/placeholder-video-1.jpg" alt="Resumen del Año Escolar 2024-2025">
+                            <a href="#video-modal-1" class="video-play-button" data-video-id="video-modal-1">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3>Resumen del Año Escolar 2024-2025</h3>
+                            <p>Julio 2025 | <span>3:45</span></p>
+                        </div>
+                    </div>
+
+                    <div class="video-item" data-category="video" data-year="2025">
+                        <div class="video-thumbnail">
+                            <img src="../assets/images/placeholder-video-2.jpg" alt="Festival Cultural 2025">
+                            <a href="#video-modal-2" class="video-play-button" data-video-id="video-modal-2">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3>Festival Cultural 2025</h3>
+                            <p>Mayo 2025 | <span>5:20</span></p>
+                        </div>
+                    </div>
+
+                    <div class="video-item" data-category="video" data-year="2024">
+                        <div class="video-thumbnail">
+                            <img src="../assets/images/placeholder-video-3.jpg" alt="Proyecto de Ciencias 2024">
+                            <a href="#video-modal-3" class="video-play-button" data-video-id="video-modal-3">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3>Proyecto de Ciencias 2024</h3>
+                            <p>Noviembre 2024 | <span>4:10</span></p>
+                        </div>
+                    </div>
+
+                    <div class="video-item" data-category="video" data-year="2024">
+                        <div class="video-thumbnail">
+                            <img src="../assets/images/placeholder-video-4.jpg" alt="Campeonato Deportivo 2024">
+                            <a href="#video-modal-4" class="video-play-button" data-video-id="video-modal-4">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3>Campeonato Deportivo 2024</h3>
+                            <p>Octubre 2024 | <span>6:35</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more">
+                    <button id="load-more-videos" class="load-more-button">Cargar más videos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modales de Video -->
+        <div id="video-modal-1" class="video-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Resumen del Año Escolar 2024-2025</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Resumen del Año Escolar 2024-2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal-2" class="video-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Festival Cultural 2025</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Festival Cultural 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal-3" class="video-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Proyecto de Ciencias 2024</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Proyecto de Ciencias 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal-4" class="video-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Campeonato Deportivo 2024</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Campeonato Deportivo 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <section class="gallery-share">
+            <div class="container">
+                <div class="share-content">
+                    <div class="share-text">
+                        <h2>Comparte tus fotos</h2>
+                        <p>¿Tienes fotos o videos de eventos de la institución? Compártelos con nosotros para incluirlos en nuestra galería.</p>
+                    </div>
+                    <div class="share-button">
+                        <a href="contacto.html" class="button">Enviar material</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuración de Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': 'Imagen %1 de %2',
+                'fadeDuration': 300
+            });
+
+            // Slider de imágenes destacadas
+            const slides = document.querySelectorAll('.featured-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevButton = document.getElementById('prev-slide');
+            const nextButton = document.getElementById('next-slide');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.style.display = 'none');
+                dots.forEach(dot => dot.classList.remove('active'));
+                slides[index].style.display = 'block';
+                dots[index].classList.add('active');
+            }
+
+            // Mostrar el primer slide al cargar
+            showSlide(currentSlide);
+
+            // Event listeners para los botones
+            prevButton.addEventListener('click', function() {
+                currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+                showSlide(currentSlide);
+            });
+
+            nextButton.addEventListener('click', function() {
+                currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+                showSlide(currentSlide);
+            });
+
+            // Event listeners para los dots
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    currentSlide = parseInt(this.getAttribute('data-slide'));
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Cambiar automáticamente cada 5 segundos
+            setInterval(function() {
+                currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+                showSlide(currentSlide);
+            }, 5000);
+
+            // Filtrado de galería
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const yearSelect = document.getElementById('year-select');
+            const galleryItems = document.querySelectorAll('.gallery-item, .video-item');
+
+            function filterGallery() {
+                const selectedCategory = document.querySelector('.filter-button.active').getAttribute('data-filter');
+                const selectedYear = yearSelect.value;
+
+                galleryItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemYear = item.getAttribute('data-year');
+
+                    if (
+                        (selectedCategory === 'all' || selectedCategory === itemCategory) &&
+                        (selectedYear === 'all' || selectedYear === itemYear)
+                    ) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    filterGallery();
+                });
+            });
+
+            yearSelect.addEventListener('change', filterGallery);
+
+            // Modales de video
+            const videoButtons = document.querySelectorAll('.video-play-button');
+            const videoModals = document.querySelectorAll('.video-modal');
+            const closeButtons = document.querySelectorAll('.close-modal');
+
+            videoButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modalId = this.getAttribute('data-video-id');
+                    document.getElementById(modalId).style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevenir scroll
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.video-modal');
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restaurar scroll
+                    
+                    // Pausar el video al cerrar el modal
+                    const iframe = modal.querySelector('iframe');
+                    const iframeSrc = iframe.src;
+                    iframe.src = iframeSrc; // Recargar el iframe para detener el video
+                });
+            });
+
+            // Cerrar modal al hacer clic fuera del contenido
+            videoModals.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        
+                        // Pausar el video
+                        const iframe = this.querySelector('iframe');
+                        const iframeSrc = iframe.src;
+                        iframe.src = iframeSrc;
+                    }
+                });
+            });
+
+            // Botones de cargar más
+            document.getElementById('load-more-photos').addEventListener('click', function() {
+                // Aquí se implementaría la carga de más fotos
+                alert('Esta funcionalidad cargará más fotos en una implementación real.');
+            });
+
+            document.getElementById('load-more-videos').addEventListener('click', function() {
+                // Aquí se implementaría la carga de más videos
+                alert('Esta funcionalidad cargará más videos en una implementación real.');
+            });
+
+            // Formulario de newsletter en el footer
+            document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Aquí se implementaría la suscripción al newsletter
+                alert('¡Gracias por suscribirte a nuestro boletín informativo!');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias y eventos de la Unidad Educativa San Francisco de Ibarra, Ecuador">
+    <meta name="keywords"
+        content="noticias educativas, eventos escolares, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Noticias - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar (cargado desde fragmento) -->
+    <div id="navbar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Noticias y Eventos</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li class="active">Noticias</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="news-filter">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="news-search" placeholder="Buscar noticias...">
+                        <button id="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-categories">
+                        <span>Filtrar por:</span>
+                        <button class="filter-button active" data-category="all">Todos</button>
+                        <button class="filter-button" data-category="academic">Académico</button>
+                        <button class="filter-button" data-category="cultural">Cultural</button>
+                        <button class="filter-button" data-category="sports">Deportes</button>
+                        <button class="filter-button" data-category="institutional">Institucional</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-news">
+            <div class="container">
+                <h2>Noticias Destacadas</h2>
+                <div class="featured-news-grid">
+                    <div class="featured-news-main">
+                        <article class="news-card featured" data-category="institutional">
+                            <div class="news-image">
+                                <img src="../assets/images/placeholder-news-1.jpg"
+                                    alt="Ceremonia de inauguración del año lectivo 2025-2026">
+                                <span class="news-category">Institucional</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date"><i class="far fa-calendar-alt"></i> 1 de septiembre, 2025</span>
+                                <h3>Ceremonia de inauguración del año lectivo 2025-2026</h3>
+                                <p>Con gran entusiasmo y expectativas, la Unidad Educativa San Francisco dio inicio al
+                                    nuevo año lectivo con una emotiva ceremonia que contó con la presencia de
+                                    autoridades, docentes, estudiantes y padres de familia.</p>
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="featured-news-secondary">
+                        <article class="news-card" data-category="academic">
+                            <div class="news-image">
+                                <img src="../assets/images/placeholder-news-2.jpg"
+                                    alt="Estudiantes ganan concurso nacional de ciencias">
+                                <span class="news-category">Académico</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date"><i class="far fa-calendar-alt"></i> 28 de agosto, 2025</span>
+                                <h3>Estudiantes ganan concurso nacional de ciencias</h3>
+                                <p>El equipo de investigación de nuestra institución obtuvo el primer lugar en la Feria
+                                    Nacional de Ciencia e Innovación con su proyecto sobre energías renovables.</p>
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        <article class="news-card" data-category="cultural">
+                            <div class="news-image">
+                                <img src="../assets/images/placeholder-news-3.jpg" alt="Festival de artes escénicas">
+                                <span class="news-category">Cultural</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date"><i class="far fa-calendar-alt"></i> 20 de agosto, 2025</span>
+                                <h3>Festival de artes escénicas cautiva a la comunidad</h3>
+                                <p>Con gran éxito se desarrolló el Festival de Artes Escénicas, donde nuestros
+                                    estudiantes demostraron su talento en teatro, danza y música.</p>
+                                <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-list">
+            <div class="container">
+                <h2>Últimas Noticias</h2>
+                <div class="news-grid">
+                    <article class="news-card" data-category="sports">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-4.jpg"
+                                alt="Equipo de fútbol campeón intercolegial">
+                            <span class="news-category">Deportes</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 15 de agosto, 2025</span>
+                            <h3>Equipo de fútbol se corona campeón intercolegial</h3>
+                            <p>Nuestros deportistas demostraron su talento y espíritu de equipo al ganar el campeonato
+                                intercolegial de fútbol por tercer año consecutivo.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="academic">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-5.jpg"
+                                alt="Implementación de laboratorio de robótica">
+                            <span class="news-category">Académico</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 10 de agosto, 2025</span>
+                            <h3>Inauguración del nuevo laboratorio de robótica</h3>
+                            <p>Con tecnología de punta, se inauguró el moderno laboratorio de robótica que beneficiará a
+                                estudiantes de todos los niveles educativos.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="institutional">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-6.jpg"
+                                alt="Convenio con universidad internacional">
+                            <span class="news-category">Institucional</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 5 de agosto, 2025</span>
+                            <h3>Firma de convenio con universidad internacional</h3>
+                            <p>La institución firmó un importante convenio de cooperación académica con la Universidad
+                                de Barcelona, que permitirá intercambios estudiantiles y docentes.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="cultural">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-7.jpg" alt="Concurso de oratoria">
+                            <span class="news-category">Cultural</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 1 de agosto, 2025</span>
+                            <h3>Estudiantes brillan en concurso nacional de oratoria</h3>
+                            <p>Tres de nuestros estudiantes obtuvieron los primeros lugares en el prestigioso concurso
+                                nacional de oratoria, demostrando excelentes habilidades comunicativas.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="sports">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-8.jpg" alt="Competencia de natación">
+                            <span class="news-category">Deportes</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 28 de julio, 2025</span>
+                            <h3>Nadadores representarán a la provincia en torneo nacional</h3>
+                            <p>El equipo de natación clasificó al campeonato nacional escolar tras obtener excelentes
+                                resultados en la fase provincial.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="academic">
+                        <div class="news-image">
+                            <img src="../assets/images/placeholder-news-9.jpg" alt="Feria de ciencias">
+                            <span class="news-category">Académico</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 25 de julio, 2025</span>
+                            <h3>Gran éxito en la Feria de Ciencias Anual</h3>
+                            <p>Estudiantes de todos los niveles presentaron innovadores proyectos científicos en la
+                                tradicional feria que promueve la investigación y el pensamiento crítico.</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-button">10</button>
+                    <button class="pagination-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <div class="container">
+                <h2>Próximos Eventos</h2>
+                <div class="events-timeline">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">SEP</span>
+                            <span class="day">15</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Jornada de Integración Familiar</h3>
+                            <p class="event-details"><i class="fas fa-clock"></i> 09:00 - 14:00 | <i
+                                    class="fas fa-map-marker-alt"></i> Canchas deportivas</p>
+                            <p>Actividades recreativas y deportivas para fortalecer los lazos entre la comunidad
+                                educativa.</p>
+                            <a href="#" class="event-button">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">SEP</span>
+                            <span class="day">22</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Conferencia: Educación para el Futuro</h3>
+                            <p class="event-details"><i class="fas fa-clock"></i> 18:00 - 20:00 | <i
+                                    class="fas fa-map-marker-alt"></i> Auditorio principal</p>
+                            <p>Ponencia a cargo del reconocido pedagogo Dr. Javier Martínez sobre los desafíos
+                                educativos del siglo XXI.</p>
+                            <a href="#" class="event-button">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">OCT</span>
+                            <span class="day">05</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Celebración del Día del Maestro</h3>
+                            <p class="event-details"><i class="fas fa-clock"></i> 11:00 - 13:00 | <i
+                                    class="fas fa-map-marker-alt"></i> Salón de actos</p>
+                            <p>Homenaje a nuestros docentes por su dedicación y compromiso con la educación de calidad.
+                            </p>
+                            <a href="#" class="event-button">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">OCT</span>
+                            <span class="day">20</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Torneo Deportivo Intercolegial</h3>
+                            <p class="event-details"><i class="fas fa-clock"></i> 08:00 - 17:00 | <i
+                                    class="fas fa-map-marker-alt"></i> Complejo deportivo</p>
+                            <p>Competencias en diversas disciplinas deportivas con la participación de instituciones
+                                educativas de la provincia.</p>
+                            <a href="#" class="event-button">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-link">
+                    <a href="estudiantes/calendario.html" class="calendar-button">
+                        <i class="far fa-calendar-alt"></i> Ver calendario completo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Mantente informado</h2>
+                        <p>Suscríbete a nuestro boletín de noticias y recibe las últimas novedades y eventos
+                            directamente en tu correo electrónico.</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <form id="news-subscription-form">
+                            <div class="form-group">
+                                <input type="text" id="subscriber-name" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="subscriber-email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group subscriber-type">
+                                <label>Soy:</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="subscriber-type" value="student" required>
+                                        Estudiante
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="subscriber-type" value="parent" required>
+                                        Padre/Madre
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="subscriber-type" value="teacher" required>
+                                        Docente
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="subscriber-type" value="other" required>
+                                        Otro
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="subscribe-button">Suscribirse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank"
+                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Reemplazar el footer actual por esto: -->
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/fragments.js"></script>
+</body>
+
+</html>

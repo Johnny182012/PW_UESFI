@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursos pedagógicos y materiales para docentes de la Unidad Educativa San Francisco">
+    <meta name="keywords" content="recursos docentes, material didáctico, planificaciones, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Recursos Docentes - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="icon" href="../../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar Actualizado -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../nosotros/historia.html">Historia</a></li>
+                    <li><a href="../nosotros/mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="../nosotros/autoridades.html">Autoridades</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../estudiantes/admisiones.html">Admisiones</a></li>
+                    <li><a href="../estudiantes/actividades.html">Actividades</a></li>
+                    <li><a href="../estudiantes/calendario.html">Calendario</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../padres/circulares.html">Circulares</a></li>
+                    <li><a href="../padres/tutorias.html">Tutorías</a></li>
+                </ul>
+            </li>
+            <li class="dropdown active">
+                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="plana-docente.html">Plana Docente</a></li>
+                    <li><a href="recursos.html" class="active">Recursos</a></li>
+                    <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Recursos Docentes</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li><a href="#">Docentes</a></li>
+                        <li class="active">Recursos</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="resources-intro">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Recursos Pedagógicos</h2>
+                    <p>En la Unidad Educativa San Francisco, ponemos a disposición de nuestros docentes una amplia variedad de recursos pedagógicos para enriquecer su labor educativa y facilitar el proceso de enseñanza-aprendizaje.</p>
+                    <p>Estos recursos han sido cuidadosamente seleccionados y desarrollados para apoyar nuestra propuesta educativa franciscana, promoviendo la innovación, la creatividad y el desarrollo integral de nuestros estudiantes.</p>
+                    <div class="login-note">
+                        <p><i class="fas fa-lock"></i> <strong>Nota:</strong> Algunos recursos requieren iniciar sesión con su cuenta institucional. Si tiene problemas de acceso, contacte al Departamento de Sistemas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-categories">
+            <div class="container">
+                <h2>Categorías de Recursos</h2>
+                
+                <div class="category-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="planning">Planificación</button>
+                        <button class="tab-button" data-tab="didactic">Material Didáctico</button>
+                        <button class="tab-button" data-tab="evaluation">Evaluación</button>
+                        <button class="tab-button" data-tab="technology">Tecnología Educativa</button>
+                        <button class="tab-button" data-tab="institutional">Documentos Institucionales</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Pestaña de Planificación -->
+                        <div id="planning" class="tab-pane active">
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Formatos de Planificación</h3>
+                                        <p>Plantillas para planificación anual, por unidades y microcurricular según los lineamientos del Ministerio de Educación y el modelo educativo franciscano.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Cronograma Académico</h3>
+                                        <p>Calendario detallado con fechas clave del año lectivo, períodos de evaluación, eventos institucionales y actividades extracurriculares.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Currículo Institucional</h3>
+                                        <p>Adaptación del currículo nacional con el enfoque franciscano, objetivos, destrezas y contenidos por nivel educativo.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Proyectos Interdisciplinarios</h3>
+                                        <p>Guías para el desarrollo de proyectos que integran diferentes áreas del conocimiento, con ejemplos y rúbricas de evaluación.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña de Material Didáctico -->
+                        <div id="didactic" class="tab-pane">
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-chalkboard"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Guías Didácticas</h3>
+                                        <p>Material de apoyo para el desarrollo de contenidos específicos, con estrategias metodológicas, actividades y recursos complementarios.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Recursos Audiovisuales</h3>
+                                        <p>Colección de videos, presentaciones y material multimedia organizado por asignaturas y niveles educativos.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-puzzle-piece"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Juegos Educativos</h3>
+                                        <p>Recursos lúdicos para el aprendizaje, incluyendo juegos de mesa, dinámicas grupales y actividades interactivas.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Fichas de Trabajo</h3>
+                                        <p>Hojas de actividades imprimibles para reforzar contenidos, organizadas por asignaturas, niveles y destrezas.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña de Evaluación -->
+                        <div id="evaluation" class="tab-pane">
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Rúbricas de Evaluación</h3>
+                                        <p>Instrumentos para evaluar diferentes tipos de actividades y productos de aprendizaje, con criterios e indicadores claros.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Banco de Preguntas</h3>
+                                        <p>Repositorio de preguntas clasificadas por asignaturas, niveles y tipos (opción múltiple, desarrollo, verdadero/falso, etc.).</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Formatos de Informes</h3>
+                                        <p>Plantillas para elaborar informes de evaluación, seguimiento académico y reportes de desempeño estudiantil.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-user-check"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Instrumentos de Autoevaluación</h3>
+                                        <p>Herramientas para promover la reflexión y autoevaluación de los estudiantes sobre su proceso de aprendizaje.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña de Tecnología Educativa -->
+                        <div id="technology" class="tab-pane">
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Plataforma Educativa</h3>
+                                        <p>Acceso al entorno virtual de aprendizaje institucional con tutoriales y guías de uso para docentes.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Herramientas Digitales</h3>
+                                        <p>Selección de aplicaciones y recursos web para la creación de contenidos interactivos, evaluaciones y presentaciones.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Tutoriales Tecnológicos</h3>
+                                        <p>Videos y guías paso a paso para el uso de herramientas tecnológicas en el aula y la creación de recursos digitales.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Recursos de Programación y Robótica</h3>
+                                        <p>Materiales para la enseñanza de programación, pensamiento computacional y robótica educativa.</p>
+                                        <a href="#" class="resource-link">Acceder <i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pestaña de Documentos Institucionales -->
+                        <div id="institutional" class="tab-pane">
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Proyecto Educativo Institucional</h3>
+                                        <p>Documento que define la identidad, visión, misión y objetivos estratégicos de la institución.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-gavel"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Código de Convivencia</h3>
+                                        <p>Normativa que regula la convivencia escolar, derechos, responsabilidades y procedimientos disciplinarios.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Procedimientos Administrativos</h3>
+                                        <p>Guías para trámites internos, solicitudes, permisos, justificaciones y otros procesos administrativos.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h3>Protocolos de Seguridad</h3>
+                                        <p>Documentos con procedimientos para situaciones de emergencia, primeros auxilios y protección de estudiantes.</p>
+                                        <a href="#" class="resource-link">Descargar <i class="fas fa-download"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-request">
+            <div class="container">
+                <h2>Solicitud de Recursos</h2>
+                <p>Si necesita algún recurso específico que no encuentra en nuestro repositorio, puede solicitarlo a través del siguiente formulario:</p>
+                
+                <form id="resource-form" class="resource-form">
+                    <div class="form-group">
+                        <label for="teacher-name">Nombre del Docente *</label>
+                        <input type="text" id="teacher-name" name="teacher-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="teacher-email">Correo Electrónico Institucional *</label>
+                        <input type="email" id="teacher-email" name="teacher-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-type">Tipo de Recurso *</label>
+                        <select id="resource-type" name="resource-type" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="planning">Planificación</option>
+                            <option value="didactic">Material Didáctico</option>
+                            <option value="evaluation">Evaluación</option>
+                            <option value="technology">Tecnología Educativa</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-description">Descripción del Recurso *</label>
+                        <textarea id="resource-description" name="resource-description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-purpose">Propósito Educativo *</label>
+                        <textarea id="resource-purpose" name="resource-purpose" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-deadline">Fecha Requerida</label>
+                        <input type="date" id="resource-deadline" name="resource-deadline">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="resource-sharing">
+            <div class="container">
+                <h2>Compartir Recursos</h2>
+                <p>Invitamos a todos los docentes a compartir sus propios recursos y experiencias educativas con la comunidad franciscana. Para compartir un recurso, por favor complete el siguiente formulario:</p>
+                
+                <form id="sharing-form" class="sharing-form">
+                    <div class="form-group">
+                        <label for="sharing-name">Nombre del Docente *</label>
+                        <input type="text" id="sharing-name" name="sharing-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sharing-email">Correo Electrónico Institucional *</label>
+                        <input type="email" id="sharing-email" name="sharing-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-title">Título del Recurso *</label>
+                        <input type="text" id="resource-title" name="resource-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-category">Categoría *</label>
+                        <select id="resource-category" name="resource-category" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="planning">Planificación</option>
+                            <option value="didactic">Material Didáctico</option>
+                            <option value="evaluation">Evaluación</option>
+                            <option value="technology">Tecnología Educativa</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-subject">Asignatura/Área *</label>
+                        <input type="text" id="resource-subject" name="resource-subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-level">Nivel Educativo *</label>
+                        <select id="resource-level" name="resource-level" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="inicial">Educación Inicial</option>
+                            <option value="basica-elemental">Básica Elemental</option>
+                            <option value="basica-media">Básica Media</option>
+                            <option value="basica-superior">Básica Superior</option>
+                            <option value="bachillerato">Bachillerato</option>
+                            <option value="all">Todos los niveles</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-summary">Descripción Breve *</label>
+                        <textarea id="resource-summary" name="resource-summary" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resource-file">Archivo (PDF, DOCX, PPTX, ZIP) *</label>
+                        <input type="file" id="resource-file" name="resource-file" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sharing-terms">
+                            <input type="checkbox" id="sharing-terms" name="sharing-terms" required>
+                            Acepto compartir este recurso con la comunidad educativa franciscana y certifico que es de mi autoría o tengo los derechos para compartirlo.
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Compartir Recurso</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Funcionalidad para las pestañas de categorías de recursos
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remover clase active de todos los botones y paneles
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // Añadir clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Mostrar el panel correspondiente
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Validación del formulario de solicitud de recursos
+        document.getElementById('resource-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría el envío del formulario
+            alert('Su solicitud de recurso ha sido enviada. Nos pondremos en contacto con usted a la brevedad.');
+            this.reset();
+        });
+
+        // Validación del formulario de compartir recursos
+        document.getElementById('sharing-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría el envío del formulario
+            alert('¡Gracias por compartir su recurso! Será revisado y publicado en nuestro repositorio.');
+            this.reset();
+        });
+
+        // Validación del formulario de newsletter en el footer
+        document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría la suscripción al newsletter
+            alert('¡Gracias por suscribirte a nuestro boletín informativo!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

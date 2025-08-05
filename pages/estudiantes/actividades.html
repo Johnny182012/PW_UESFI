@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actividades extracurriculares y eventos para estudiantes de la Unidad Educativa San Francisco">
+    <meta name="keywords" content="actividades, extracurriculares, deportes, arte, cultura, eventos, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Actividades Estudiantiles - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="icon" href="../../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar Actualizado -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../nosotros/historia.html">Historia</a></li>
+                    <li><a href="../nosotros/mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="../nosotros/autoridades.html">Autoridades</a></li>
+                </ul>
+            </li>
+            <li class="dropdown active">
+                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="admisiones.html">Admisiones</a></li>
+                    <li><a href="actividades.html" class="active">Actividades</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../padres/circulares.html">Circulares</a></li>
+                    <li><a href="../padres/tutorias.html">Tutorías</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../docentes/plana-docente.html">Plana Docente</a></li>
+                    <li><a href="../docentes/recursos.html">Recursos</a></li>
+                    <li><a href="../docentes/capacitaciones.html">Capacitaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Actividades Estudiantiles</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li><a href="#">Estudiantes</a></li>
+                        <li class="active">Actividades</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="activities-intro">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Formación Integral</h2>
+                    <p>En la Unidad Educativa San Francisco creemos en la formación integral de nuestros estudiantes. Por ello, ofrecemos una amplia variedad de actividades extracurriculares que complementan la formación académica y promueven el desarrollo de habilidades sociales, artísticas, deportivas y culturales.</p>
+                    <p>Nuestras actividades están diseñadas para descubrir y potenciar los talentos de cada estudiante, fomentando valores como el trabajo en equipo, la disciplina, la creatividad y el compromiso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="activities-categories">
+            <div class="container">
+                <h2>Categorías de Actividades</h2>
+                
+                <div class="category-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="deportivas"><i class="fas fa-running"></i> Deportivas</button>
+                        <button class="tab-button" data-tab="artisticas"><i class="fas fa-palette"></i> Artísticas</button>
+                        <button class="tab-button" data-tab="academicas"><i class="fas fa-book"></i> Académicas</button>
+                        <button class="tab-button" data-tab="culturales"><i class="fas fa-theater-masks"></i> Culturales</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="deportivas" class="tab-pane active">
+                            <div class="activity-grid">
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/futbol.jpg" alt="Equipo de fútbol">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Fútbol</h3>
+                                        <p>Entrenamiento técnico y táctico para diferentes categorías. Participación en torneos intercolegiales y locales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Lunes y miércoles, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Cancha de fútbol</li>
+                                            <li><strong>Instructor:</strong> Prof. Carlos Méndez</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/baloncesto.jpg" alt="Equipo de baloncesto">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Baloncesto</h3>
+                                        <p>Desarrollo de habilidades técnicas y estrategias de juego. Participación en ligas escolares.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Martes y jueves, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Coliseo</li>
+                                            <li><strong>Instructor:</strong> Prof. Andrea Torres</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/voleibol.jpg" alt="Equipo de voleibol">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Voleibol</h3>
+                                        <p>Entrenamiento técnico y táctico. Competencias intercolegiales y provinciales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Lunes y viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Coliseo</li>
+                                            <li><strong>Instructor:</strong> Prof. Luis Andrade</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/atletismo.jpg" alt="Atletismo">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Atletismo</h3>
+                                        <p>Entrenamiento en diferentes disciplinas: velocidad, resistencia, saltos y lanzamientos.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Miércoles y viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Pista atlética</li>
+                                            <li><strong>Instructor:</strong> Prof. Diana Ruiz</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="artisticas" class="tab-pane">
+                            <div class="activity-grid">
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/musica.jpg" alt="Taller de música">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Música</h3>
+                                        <p>Aprendizaje de instrumentos musicales, teoría musical y participación en la orquesta escolar.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Martes y jueves, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Aula de música</li>
+                                            <li><strong>Instructor:</strong> Prof. Roberto Castillo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/pintura.jpg" alt="Taller de pintura">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Pintura y Dibujo</h3>
+                                        <p>Desarrollo de técnicas artísticas y expresión creativa a través de diferentes medios.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Lunes y miércoles, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Taller de arte</li>
+                                            <li><strong>Instructor:</strong> Prof. Carmen Vásquez</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/danza.jpg" alt="Grupo de danza">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Danza</h3>
+                                        <p>Aprendizaje de diferentes estilos de danza, coreografías y presentaciones en eventos escolares.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Martes y viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Salón de danza</li>
+                                            <li><strong>Instructor:</strong> Prof. Gabriela Morales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/teatro.jpg" alt="Grupo de teatro">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Teatro</h3>
+                                        <p>Desarrollo de habilidades de expresión corporal, interpretación y montaje de obras teatrales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Jueves y viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Auditorio</li>
+                                            <li><strong>Instructor:</strong> Prof. Javier Paredes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="academicas" class="tab-pane">
+                            <div class="activity-grid">
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/robotica.jpg" alt="Club de robótica">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Robótica</h3>
+                                        <p>Diseño, construcción y programación de robots. Participación en competencias nacionales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Lunes y jueves, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Laboratorio de tecnología</li>
+                                            <li><strong>Instructor:</strong> Ing. Marco Suárez</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/debate.jpg" alt="Club de debate">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Club de Debate</h3>
+                                        <p>Desarrollo de habilidades de argumentación, oratoria y pensamiento crítico.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Miércoles, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Aula 15</li>
+                                            <li><strong>Instructor:</strong> Prof. Patricia Andrade</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/ciencias.jpg" alt="Club de ciencias">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Club de Ciencias</h3>
+                                        <p>Experimentación científica, proyectos de investigación y participación en ferias de ciencias.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Martes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Laboratorio de ciencias</li>
+                                            <li><strong>Instructor:</strong> Prof. Fernando Dávila</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/idiomas.jpg" alt="Club de idiomas">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Club de Idiomas</h3>
+                                        <p>Práctica conversacional de inglés y francés. Intercambios culturales virtuales con estudiantes extranjeros.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Aula 12</li>
+                                            <li><strong>Instructor:</strong> Prof. Natalia Gómez</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="culturales" class="tab-pane">
+                            <div class="activity-grid">
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/folklore.jpg" alt="Grupo de danza folclórica">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Danza Folclórica</h3>
+                                        <p>Aprendizaje de danzas tradicionales ecuatorianas y latinoamericanas. Presentaciones en eventos culturales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Lunes y jueves, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Salón de danza</li>
+                                            <li><strong>Instructor:</strong> Prof. Rosa Imbaquingo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/coro.jpg" alt="Coro escolar">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Coro</h3>
+                                        <p>Formación vocal, interpretación coral y presentaciones en eventos institucionales y comunitarios.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Martes y viernes, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Aula de música</li>
+                                            <li><strong>Instructor:</strong> Prof. Cecilia Narváez</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/artesania.jpg" alt="Taller de artesanía">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Artesanía Tradicional</h3>
+                                        <p>Aprendizaje de técnicas artesanales tradicionales de la región. Elaboración de productos artesanales.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Miércoles, 14:30 - 16:00</li>
+                                            <li><strong>Lugar:</strong> Taller de manualidades</li>
+                                            <li><strong>Instructor:</strong> Prof. María Cotacachi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <div class="activity-image">
+                                        <img src="../../assets/images/actividades/gastronomia.jpg" alt="Taller de gastronomía">
+                                    </div>
+                                    <div class="activity-content">
+                                        <h3>Gastronomía Ecuatoriana</h3>
+                                        <p>Preparación de platos tradicionales ecuatorianos. Valoración de la cultura gastronómica nacional.</p>
+                                        <ul class="activity-details">
+                                            <li><strong>Horario:</strong> Jueves, 14:30 - 16:30</li>
+                                            <li><strong>Lugar:</strong> Laboratorio de gastronomía</li>
+                                            <li><strong>Instructor:</strong> Chef Pablo Jaramillo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <div class="container">
+                <h2>Eventos Destacados</h2>
+                <p class="section-intro">A lo largo del año escolar, organizamos diversos eventos que permiten a nuestros estudiantes demostrar sus habilidades y talentos.</p>
+                
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">Octubre</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Semana Cultural Franciscana</h3>
+                            <p>Exposiciones, presentaciones artísticas, concursos y actividades culturales que celebran nuestra identidad institucional.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">Diciembre</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Festival Navideño</h3>
+                            <p>Presentaciones musicales, teatrales y coreográficas con temática navideña. Concurso de villancicos y decoración.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">Febrero</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Juegos Deportivos Internos</h3>
+                            <p>Competencias deportivas en diferentes disciplinas que promueven el espíritu deportivo y la sana competencia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">Abril</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Feria de Ciencias e Innovación</h3>
+                            <p>Exposición de proyectos científicos, tecnológicos y de innovación desarrollados por nuestros estudiantes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">Junio</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Festival de Artes Escénicas</h3>
+                            <p>Presentaciones de teatro, danza y música que muestran el talento artístico de nuestros estudiantes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration-section">
+            <div class="container">
+                <h2>Inscripción en Actividades</h2>
+                <p>Para inscribirse en cualquiera de nuestras actividades extracurriculares, los estudiantes deben:</p>
+                
+                <ol class="registration-steps">
+                    <li>Consultar con su tutor sobre las actividades disponibles para su nivel educativo.</li>
+                    <li>Completar el formulario de inscripción con la autorización de sus padres o representantes.</li>
+                    <li>Entregar el formulario en Inspección General dentro de los plazos establecidos.</li>
+                    <li>Asistir a la reunión informativa con el instructor de la actividad.</li>
+                </ol>
+                
+                <div class="registration-note">
+                    <p><strong>Nota:</strong> La participación en actividades extracurriculares está sujeta a un buen rendimiento académico y comportamental. Los estudiantes deben mantener un promedio mínimo de 7/10 en todas las asignaturas.</p>
+                </div>
+                
+                <div class="registration-cta">
+                    <a href="#" class="cta-button">Descargar Formulario de Inscripción</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Galería de Actividades</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria1.jpg" alt="Estudiantes en competencia deportiva">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria2.jpg" alt="Presentación musical">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria3.jpg" alt="Feria de ciencias">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria4.jpg" alt="Grupo de danza folclórica">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria5.jpg" alt="Taller de robótica">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/actividades/galeria6.jpg" alt="Presentación teatral">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Funcionalidad para las pestañas de categorías
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remover clase active de todos los botones y paneles
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // Añadir clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Mostrar el panel correspondiente
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Validación del formulario de newsletter en el footer
+        document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se podría implementar la suscripción al newsletter
+            alert('¡Gracias por suscribirte a nuestro boletín informativo!');
+            this.reset();
+        });
+
+        // Funcionalidad para la galería (podría implementarse un lightbox)
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                // Aquí se podría implementar un lightbox para ver las imágenes en tamaño completo
+                alert('Funcionalidad de galería en desarrollo');
+            });
+        });
+    </script>
+</body>
+
+</html>

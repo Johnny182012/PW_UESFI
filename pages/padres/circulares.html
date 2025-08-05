@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Circulares y comunicados oficiales para padres de familia de la Unidad Educativa San Francisco">
+    <meta name="keywords" content="circulares, comunicados, avisos, padres de familia, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Circulares - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="icon" href="../../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar Actualizado -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../nosotros/historia.html">Historia</a></li>
+                    <li><a href="../nosotros/mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="../nosotros/autoridades.html">Autoridades</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../estudiantes/admisiones.html">Admisiones</a></li>
+                    <li><a href="../estudiantes/actividades.html">Actividades</a></li>
+                    <li><a href="../estudiantes/calendario.html">Calendario</a></li>
+                </ul>
+            </li>
+            <li class="dropdown active">
+                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="circulares.html" class="active">Circulares</a></li>
+                    <li><a href="tutorias.html">Tutorías</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../docentes/plana-docente.html">Plana Docente</a></li>
+                    <li><a href="../docentes/recursos.html">Recursos</a></li>
+                    <li><a href="../docentes/capacitaciones.html">Capacitaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Circulares</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li><a href="#">Padres</a></li>
+                        <li class="active">Circulares</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="circulars-intro">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Comunicación Institucional</h2>
+                    <p>En la Unidad Educativa San Francisco consideramos fundamental mantener una comunicación clara y oportuna con los padres de familia y representantes. A través de las circulares, compartimos información importante sobre actividades académicas, eventos institucionales, reuniones y otros aspectos relevantes del proceso educativo.</p>
+                    <p>Le invitamos a revisar regularmente esta sección para mantenerse informado sobre los acontecimientos y disposiciones institucionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="circulars-search">
+            <div class="container">
+                <h2>Buscar Circulares</h2>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="nivel-educativo">Nivel Educativo:</label>
+                        <select id="nivel-educativo">
+                            <option value="todos">Todos</option>
+                            <option value="inicial">Educación Inicial</option>
+                            <option value="basica-elemental">Básica Elemental (2° a 4°)</option>
+                            <option value="basica-media">Básica Media (5° a 7°)</option>
+                            <option value="basica-superior">Básica Superior (8° a 10°)</option>
+                            <option value="bachillerato">Bachillerato (1° a 3°)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria">
+                            <option value="todas">Todas</option>
+                            <option value="academica">Académica</option>
+                            <option value="administrativa">Administrativa</option>
+                            <option value="eventos">Eventos</option>
+                            <option value="reuniones">Reuniones</option>
+                            <option value="evaluaciones">Evaluaciones</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="fecha">Fecha:</label>
+                        <input type="month" id="fecha">
+                    </div>
+                    
+                    <button id="buscar-circular" class="search-button">Buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="circulars-list">
+            <div class="container">
+                <h2>Circulares Recientes</h2>
+                
+                <div class="circulars-grid">
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 025-2024</span>
+                            <span class="circular-date">15 de mayo, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Cronograma de Exámenes del Segundo Quimestre</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-academic">Académica</span>
+                                <span class="tag tag-evaluations">Evaluaciones</span>
+                                <span class="tag tag-all-levels">Todos los niveles</span>
+                            </div>
+                            <p>Se comunica a los padres de familia el cronograma de exámenes quimestrales correspondientes al segundo quimestre del año lectivo 2023-2024...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 024-2024</span>
+                            <span class="circular-date">10 de mayo, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Programa por el Día de la Madre</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-events">Eventos</span>
+                                <span class="tag tag-all-levels">Todos los niveles</span>
+                            </div>
+                            <p>Invitamos a todas las madres de familia a participar en el programa especial que se realizará en su honor el día viernes 12 de mayo...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 023-2024</span>
+                            <span class="circular-date">5 de mayo, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Reunión de Padres de Familia - Tercer Parcial</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-meetings">Reuniones</span>
+                                <span class="tag tag-all-levels">Todos los niveles</span>
+                            </div>
+                            <p>Se convoca a los padres de familia a la reunión de entrega de reportes de calificaciones correspondientes al tercer parcial del segundo quimestre...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 022-2024</span>
+                            <span class="circular-date">28 de abril, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Feria de Ciencias e Innovación</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-academic">Académica</span>
+                                <span class="tag tag-events">Eventos</span>
+                                <span class="tag tag-basic-superior">Básica Superior</span>
+                                <span class="tag tag-bachillerato">Bachillerato</span>
+                            </div>
+                            <p>Informamos sobre la realización de la Feria de Ciencias e Innovación que se llevará a cabo del 21 al 25 de abril. Los estudiantes presentarán sus proyectos científicos y tecnológicos...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 021-2024</span>
+                            <span class="circular-date">20 de abril, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Actualización de Datos de Contacto</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-administrative">Administrativa</span>
+                                <span class="tag tag-all-levels">Todos los niveles</span>
+                            </div>
+                            <p>Solicitamos a todos los padres de familia actualizar sus datos de contacto (teléfonos, correo electrónico, dirección) para mantener una comunicación efectiva...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-header">
+                            <span class="circular-number">Circular N° 020-2024</span>
+                            <span class="circular-date">15 de abril, 2024</span>
+                        </div>
+                        <div class="circular-content">
+                            <h3>Mingas de Limpieza y Mantenimiento</h3>
+                            <div class="circular-tags">
+                                <span class="tag tag-administrative">Administrativa</span>
+                                <span class="tag tag-all-levels">Todos los niveles</span>
+                            </div>
+                            <p>Invitamos a los padres de familia a participar en las mingas de limpieza y mantenimiento que se realizarán el sábado 20 de abril...</p>
+                            <div class="circular-actions">
+                                <a href="#" class="circular-link">Ver circular completa</a>
+                                <a href="#" class="circular-download"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="circulars-archive">
+            <div class="container">
+                <h2>Archivo de Circulares</h2>
+                <p>Acceda a las circulares de períodos anteriores seleccionando el año lectivo:</p>
+                
+                <div class="archive-buttons">
+                    <button class="archive-button active">2023-2024</button>
+                    <button class="archive-button">2022-2023</button>
+                    <button class="archive-button">2021-2022</button>
+                    <button class="archive-button">2020-2021</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscription-section">
+            <div class="container">
+                <h2>Suscripción a Circulares</h2>
+                <p>Reciba las circulares directamente en su correo electrónico. Complete el siguiente formulario para suscribirse:</p>
+                
+                <form id="subscription-form" class="subscription-form">
+                    <div class="form-group">
+                        <label for="parent-name">Nombre del Representante *</label>
+                        <input type="text" id="parent-name" name="parent-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parent-email">Correo Electrónico *</label>
+                        <input type="email" id="parent-email" name="parent-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="student-name">Nombre del Estudiante *</label>
+                        <input type="text" id="student-name" name="student-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="student-grade">Curso/Grado *</label>
+                        <input type="text" id="student-grade" name="student-grade" required>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>Categorías de interés:</label>
+                        <div class="checkbox-options">
+                            <label><input type="checkbox" name="categories[]" value="academica" checked> Académica</label>
+                            <label><input type="checkbox" name="categories[]" value="administrativa" checked> Administrativa</label>
+                            <label><input type="checkbox" name="categories[]" value="eventos" checked> Eventos</label>
+                            <label><input type="checkbox" name="categories[]" value="reuniones" checked> Reuniones</label>
+                            <label><input type="checkbox" name="categories[]" value="evaluaciones" checked> Evaluaciones</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Funcionalidad para el filtro de búsqueda
+        document.getElementById('buscar-circular').addEventListener('click', function() {
+            // Aquí se implementaría la lógica de filtrado
+            alert('Funcionalidad de búsqueda en desarrollo');
+        });
+
+        // Funcionalidad para los botones de archivo
+        document.querySelectorAll('.archive-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remover clase active de todos los botones
+                document.querySelectorAll('.archive-button').forEach(btn => btn.classList.remove('active'));
+                
+                // Añadir clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Aquí se implementaría la carga de circulares del año seleccionado
+                alert('Cargando circulares del período ' + this.textContent);
+            });
+        });
+
+        // Validación del formulario de suscripción
+        document.getElementById('subscription-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría el envío del formulario
+            alert('Gracias por suscribirse a nuestras circulares. Recibirá las notificaciones en su correo electrónico.');
+            this.reset();
+        });
+
+        // Validación del formulario de newsletter en el footer
+        document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría la suscripción al newsletter
+            alert('¡Gracias por suscribirte a nuestro boletín informativo!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

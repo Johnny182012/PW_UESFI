@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Fondo circular con gradiente -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#grad1)" />
+  
+  <!-- Silueta de persona graduada -->
+  <g transform="translate(100, 90)">
+    <!-- Cabeza -->
+    <circle cx="0" cy="-40" r="30" fill="#ecf0f1" />
+    
+    <!-- Birrete de graduación -->
+    <rect x="-25" y="-80" width="50" height="10" fill="#34495e" />
+    <polygon points="0,-100 -25,-80 25,-80" fill="#34495e" />
+    <circle cx="0" cy="-100" r="5" fill="#f1c40f" />
+    <rect x="-2" y="-100" width="4" height="20" fill="#f1c40f" />
+    
+    <!-- Cuerpo -->
+    <path d="M-30,-10 C-40,20 -30,50 0,50 C30,50 40,20 30,-10 Z" fill="#3498db" />
+    
+    <!-- Toga -->
+    <path d="M-20,-10 L-40,40 L40,40 L20,-10 Z" fill="#34495e" />
+    
+    <!-- Diploma enrollado -->
+    <g transform="translate(25, 20) rotate(30)">
+      <rect x="-15" y="-5" width="30" height="10" rx="5" fill="#ecf0f1" />
+      <rect x="-15" y="-5" width="30" height="2" rx="1" fill="#bdc3c7" />
+      <rect x="-15" y="3" width="30" height="2" rx="1" fill="#bdc3c7" />
+    </g>
+  </g>
+  
+  <!-- Detalles faciales simplificados -->
+  <g transform="translate(100, 50)">
+    <!-- Ojos -->
+    <circle cx="-10" cy="0" r="3" fill="#34495e" />
+    <circle cx="10" cy="0" r="3" fill="#34495e" />
+    
+    <!-- Sonrisa -->
+    <path d="M-15,15 Q0,25 15,15" fill="none" stroke="#34495e" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

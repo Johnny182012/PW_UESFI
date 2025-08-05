@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a nuestro equipo docente en la Unidad Educativa San Francisco de Ibarra">
+    <meta name="keywords" content="docentes, profesores, plana docente, Unidad Educativa San Francisco, Ibarra, Ecuador">
+    <title>Plana Docente - Unidad Educativa San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="icon" href="../../assets/images/logo/ESCUDO-UESF.png" type="image/png">
+</head>
+
+<body>
+    <!-- Navbar Actualizado -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../nosotros/historia.html">Historia</a></li>
+                    <li><a href="../nosotros/mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="../nosotros/autoridades.html">Autoridades</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../estudiantes/admisiones.html">Admisiones</a></li>
+                    <li><a href="../estudiantes/actividades.html">Actividades</a></li>
+                    <li><a href="../estudiantes/calendario.html">Calendario</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../padres/circulares.html">Circulares</a></li>
+                    <li><a href="../padres/tutorias.html">Tutorías</a></li>
+                </ul>
+            </li>
+            <li class="dropdown active">
+                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="plana-docente.html" class="active">Plana Docente</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="capacitaciones.html">Capacitaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Plana Docente</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li><a href="#">Docentes</a></li>
+                        <li class="active">Plana Docente</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="faculty-intro">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Nuestro Equipo Docente</h2>
+                    <p>En la Unidad Educativa San Francisco, contamos con un equipo de profesionales altamente calificados y comprometidos con la excelencia educativa. Nuestros docentes combinan experiencia, vocación y formación continua para ofrecer una educación integral basada en valores franciscanos.</p>
+                    <p>Cada miembro de nuestra plana docente está dedicado a descubrir y potenciar las capacidades de nuestros estudiantes, acompañándolos en su proceso de aprendizaje y crecimiento personal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-filter">
+            <div class="container">
+                <h2>Buscar Docentes</h2>
+                <div class="filter-container">
+                    <div class="search-box">
+                        <input type="text" id="faculty-search" placeholder="Buscar por nombre o asignatura...">
+                        <button id="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="level-filter">
+                            <option value="all">Todos los niveles</option>
+                            <option value="inicial">Educación Inicial</option>
+                            <option value="basica-elemental">Básica Elemental</option>
+                            <option value="basica-media">Básica Media</option>
+                            <option value="basica-superior">Básica Superior</option>
+                            <option value="bachillerato">Bachillerato</option>
+                        </select>
+                        <select id="department-filter">
+                            <option value="all">Todas las áreas</option>
+                            <option value="lengua">Lengua y Literatura</option>
+                            <option value="matematicas">Matemáticas</option>
+                            <option value="ciencias">Ciencias Naturales</option>
+                            <option value="sociales">Estudios Sociales</option>
+                            <option value="ingles">Inglés</option>
+                            <option value="educacion-fisica">Educación Física</option>
+                            <option value="arte">Educación Cultural y Artística</option>
+                            <option value="informatica">Informática</option>
+                            <option value="valores">Educación en Valores</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-directory">
+            <div class="container">
+                <h2>Directorio Docente</h2>
+                <div class="faculty-grid" id="faculty-grid">
+                    <!-- Educación Inicial -->
+                    <div class="faculty-card" data-level="inicial" data-department="valores">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="María Pérez">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. María Pérez</h3>
+                            <p class="faculty-position">Docente de Educación Inicial</p>
+                            <p class="faculty-education">Licenciada en Educación Parvularia</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:mperez@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="inicial" data-department="valores">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Carmen Suárez">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Carmen Suárez</h3>
+                            <p class="faculty-position">Docente de Educación Inicial</p>
+                            <p class="faculty-education">Licenciada en Educación Parvularia</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:csuarez@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Básica Elemental -->
+                    <div class="faculty-card" data-level="basica-elemental" data-department="lengua">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Patricia Andrade">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Patricia Andrade</h3>
+                            <p class="faculty-position">Docente de 1° EGB</p>
+                            <p class="faculty-education">Licenciada en Ciencias de la Educación</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:pandrade@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="basica-elemental" data-department="matematicas">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Rosa Imbaquingo">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Rosa Imbaquingo</h3>
+                            <p class="faculty-position">Docente de 1° EGB</p>
+                            <p class="faculty-education">Licenciada en Ciencias de la Educación</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:rimbaquingo@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Básica Media -->
+                    <div class="faculty-card" data-level="basica-media" data-department="ciencias">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Diana Ruiz">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Diana Ruiz</h3>
+                            <p class="faculty-position">Docente de Ciencias Naturales</p>
+                            <p class="faculty-education">Licenciada en Biología y Química</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:druiz@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="basica-media" data-department="sociales">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-male.jpg" alt="Juan Morales">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcdo. Juan Morales</h3>
+                            <p class="faculty-position">Docente de Estudios Sociales</p>
+                            <p class="faculty-education">Licenciado en Historia y Geografía</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:jmorales@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Básica Superior -->
+                    <div class="faculty-card" data-level="basica-superior" data-department="lengua">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Lucía Narváez">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Lucía Narváez</h3>
+                            <p class="faculty-position">Docente de Lengua y Literatura</p>
+                            <p class="faculty-education">Magíster en Literatura Hispanoamericana</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:lnarvaez@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="basica-superior" data-department="matematicas">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-male.jpg" alt="Carlos Méndez">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcdo. Carlos Méndez</h3>
+                            <p class="faculty-position">Docente de Matemáticas</p>
+                            <p class="faculty-education">Licenciado en Ciencias Exactas</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:cmendez@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bachillerato -->
+                    <div class="faculty-card" data-level="bachillerato" data-department="ciencias">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-male.jpg" alt="Fernando Dávila">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcdo. Fernando Dávila</h3>
+                            <p class="faculty-position">Docente de Física</p>
+                            <p class="faculty-education">Magíster en Física Aplicada</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:fdavila@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="bachillerato" data-department="ingles">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Andrea Torres">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Andrea Torres</h3>
+                            <p class="faculty-position">Docente de Inglés</p>
+                            <p class="faculty-education">Magíster en Enseñanza de Inglés como Lengua Extranjera</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:atorres@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Áreas Especiales -->
+                    <div class="faculty-card" data-level="all" data-department="educacion-fisica">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-male.jpg" alt="Roberto Castillo">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcdo. Roberto Castillo</h3>
+                            <p class="faculty-position">Docente de Educación Física</p>
+                            <p class="faculty-education">Licenciado en Cultura Física</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:rcastillo@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="all" data-department="arte">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-female.jpg" alt="Gabriela Torres">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Lcda. Gabriela Torres</h3>
+                            <p class="faculty-position">Docente de Educación Cultural y Artística</p>
+                            <p class="faculty-education">Licenciada en Artes Plásticas</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:gtorres@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-level="all" data-department="informatica">
+                        <div class="faculty-image">
+                            <img src="../../assets/images/placeholder-male.jpg" alt="Javier Paredes">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Ing. Javier Paredes</h3>
+                            <p class="faculty-position">Docente de Informática</p>
+                            <p class="faculty-education">Ingeniero en Sistemas Computacionales</p>
+                            <div class="faculty-contact">
+                                <a href="mailto:jparedes@colegiosanfrancisco.edu.ec"><i class="fas fa-envelope"></i> Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p>No se encontraron docentes que coincidan con los criterios de búsqueda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-stats">
+            <div class="container">
+                <h2>Estadísticas Docentes</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-number">45</div>
+                        <div class="stat-title">Docentes</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number">85%</div>
+                        <div class="stat-title">Con Maestría</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-number">12</div>
+                        <div class="stat-title">Años Promedio de Experiencia</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-number">10</div>
+                        <div class="stat-title">Áreas Académicas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-development">
+            <div class="container">
+                <h2>Desarrollo Profesional</h2>
+                <p>En la Unidad Educativa San Francisco, promovemos la formación continua de nuestros docentes a través de diversas estrategias:</p>
+                
+                <div class="development-grid">
+                    <div class="development-card">
+                        <div class="development-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="development-content">
+                            <h3>Capacitación Continua</h3>
+                            <p>Programa anual de capacitaciones en metodologías innovadoras, uso de tecnología educativa y estrategias de evaluación.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="development-card">
+                        <div class="development-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="development-content">
+                            <h3>Comunidades de Aprendizaje</h3>
+                            <p>Grupos de docentes que comparten experiencias, reflexionan sobre su práctica y desarrollan proyectos colaborativos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="development-card">
+                        <div class="development-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="development-content">
+                            <h3>Convenios Interinstitucionales</h3>
+                            <p>Alianzas con universidades y organizaciones educativas para programas de formación especializada.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="development-card">
+                        <div class="development-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="development-content">
+                            <h3>Innovación Educativa</h3>
+                            <p>Proyectos de investigación-acción para mejorar la práctica docente y el aprendizaje de los estudiantes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/593960332020" class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> (06) 3700-420</p>
+                <p><i class="fas fa-envelope"></i> secretaria@colegiosanfrancisco.edu.ec</p>
+                <p><i class="fas fa-clock"></i> L-V: 7:00 - 15:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Miguel Oviedo 1-91 y Juan Montalvo</p>
+                <p>Ibarra, Ecuador</p>
+                <a href="https://maps.app.goo.gl/aDksQrrmhUqvBnnt9" target="_blank" class="map-link">Ver en mapa <i
+                        class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/colegiosanfrancisco.edu.ec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/uesf_panchos?igsh=cDRsbmhlbHg2ZjJi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@unidadeducativasanfrancisc2521" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Boletín informativo</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Unidad Educativa San Francisco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Funcionalidad de búsqueda y filtrado de docentes
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('faculty-search');
+            const levelFilter = document.getElementById('level-filter');
+            const departmentFilter = document.getElementById('department-filter');
+            const searchButton = document.getElementById('search-button');
+            const facultyCards = document.querySelectorAll('.faculty-card');
+            const noResults = document.getElementById('no-results');
+            
+            // Función para filtrar docentes
+            function filterFaculty() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const levelValue = levelFilter.value;
+                const departmentValue = departmentFilter.value;
+                
+                let visibleCount = 0;
+                
+                facultyCards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const cardLevel = card.getAttribute('data-level');
+                    const cardDepartment = card.getAttribute('data-department');
+                    
+                    const matchesSearch = searchTerm === '' || cardText.includes(searchTerm);
+                    const matchesLevel = levelValue === 'all' || cardLevel === levelValue || cardLevel === 'all';
+                    const matchesDepartment = departmentValue === 'all' || cardDepartment === departmentValue;
+                    
+                    if (matchesSearch && matchesLevel && matchesDepartment) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Mostrar mensaje si no hay resultados
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            // Event listeners
+            searchButton.addEventListener('click', filterFaculty);
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    filterFaculty();
+                }
+            });
+            levelFilter.addEventListener('change', filterFaculty);
+            departmentFilter.addEventListener('change', filterFaculty);
+        });
+
+        // Validación del formulario de newsletter en el footer
+        document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aquí se implementaría la suscripción al newsletter
+            alert('¡Gracias por suscribirte a nuestro boletín informativo!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
