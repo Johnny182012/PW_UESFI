@@ -52,110 +52,87 @@ async function loadFragment(containerId, fragmentPath) {
         // Reemplazar la variable #ROOT_PATH# en el HTML con la ruta raíz calculada
         html = html.replace(/#ROOT_PATH#/, rootPath);
         
-        // Función para manejar la navegación con data-href
-        function setupNavigation() {
-            document.querySelectorAll('a[data-href]').forEach(link => {
-                const href = link.getAttribute('data-href');
-                const rootPath = getRootPath();
-                const correctedHref = href.replace(/#ROOT_PATH#/g, rootPath);
-                
-                // Establecer el href correcto
-                link.setAttribute('href', correctedHref);
-                
-                // Opcional: eliminar el atributo data-href para evitar confusiones
-                link.removeAttribute('data-href');
-            });
+        // Insertar el HTML en el contenedor
+        container.innerHTML = html;
+        
+        // Si es la barra de navegación, activar el elemento actual
+        if (containerId === 'navbar-container') {
+            activateCurrentNavItem();
         }
         
-        // Modificar la función loadFragment para llamar a setupNavigation después de cargar el fragmento
-        async function loadFragment(containerId, fragmentPath) {
-            // ... existing code ...
-            
-            // Insertar el HTML en el contenedor
-            container.innerHTML = html;
-            
-            // Configurar la navegación para los enlaces con data-href
-            setupNavigation();
-            
-            // Si es la barra de navegación, activar el elemento actual
-            if (containerId === 'navbar-container') {
-                activateCurrentNavItem();
-            }
-            
-            console.log(`Fragmento ${fragmentPath} cargado correctamente`);
-        }
-        
-        // Función para activar el elemento de navegación actual
-        function activateCurrentNavItem() {
-            // Obtener la URL actual
-            const currentPath = window.location.pathname;
-            console.log("Activando elemento de navegación para:", currentPath);
-            
-            // Seleccionar todos los enlaces de navegación
-            const navLinks = document.querySelectorAll('.nav-links a');
-            if (!navLinks || navLinks.length === 0) {
-                console.warn('No se encontraron elementos de navegación');
-                return;
-            }
-            
-            // Eliminar la clase 'active' de todos los enlaces
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                // Si el padre es un elemento de lista con clase 'dropdown', también eliminar 'active'
-                if (link.parentElement.parentElement.classList.contains('dropdown')) {
-                    link.parentElement.parentElement.classList.remove('active');
-                }
-            });
-            
-            // Buscar y activar el enlace que coincide con la URL actual
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute('href');
-                if (!linkPath) return;
-                
-                // Verificar si la URL actual termina con el path del enlace
-                if (currentPath.endsWith(linkPath) || 
-                    (currentPath === '/' && linkPath === 'index.html') ||
-                    (currentPath.endsWith('/index.html') && linkPath === 'index.html')) {
-                    
-                    link.classList.add('active');
-                    
-                    // Si el enlace está dentro de un dropdown, activar también el dropdown
-                    const parentLi = link.closest('li.dropdown');
-                    if (parentLi) {
-                        parentLi.classList.add('active');
-                        // También activar el enlace principal del dropdown
-                        const dropdownLink = parentLi.querySelector(':scope > a');
-                        if (dropdownLink) {
-                            dropdownLink.classList.add('active');
-                        }
-                    }
-                    
-                    console.log("Elemento activado:", linkPath);
-                }
-            });
-        }
-        
-        // Cargar los fragmentos cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("DOM cargado, iniciando carga de fragmentos");
-            
-            // Cargar la barra de navegación
-            const navbarContainer = document.getElementById('navbar-container');
-            if (navbarContainer) {
-                loadFragment('navbar-container', 'fragments/nav.html');
-            } else {
-                console.log("No se encontró el contenedor de la barra de navegación");
-            }
-            
-            // Cargar el pie de página
-            const footerContainer = document.getElementById('footer-container');
-            if (footerContainer) {
-                loadFragment('footer-container', 'fragments/footer.html');
-            } else {
-                console.log("No se encontró el contenedor del pie de página");
-            }
-        });
+        console.log(`Fragmento ${fragmentPath} cargado correctamente`);
     } catch (error) {
         console.error('Error al cargar el fragmento:', error);
     }
 }
+
+// Función para activar el elemento de navegación actual
+function activateCurrentNavItem() {
+    // Obtener la URL actual
+    const currentPath = window.location.pathname;
+    console.log("Activando elemento de navegación para:", currentPath);
+    
+    // Seleccionar todos los enlaces de navegación
+    const navLinks = document.querySelectorAll('.nav-links a');
+    if (!navLinks || navLinks.length === 0) {
+        console.warn('No se encontraron elementos de navegación');
+        return;
+    }
+    
+    // Eliminar la clase 'active' de todos los enlaces
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        // Si el padre es un elemento de lista con clase 'dropdown', también eliminar 'active'
+        if (link.parentElement.parentElement.classList.contains('dropdown')) {
+            link.parentElement.parentElement.classList.remove('active');
+        }
+    });
+    
+    // Buscar y activar el enlace que coincide con la URL actual
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (!linkPath) return;
+        
+        // Verificar si la URL actual termina con el path del enlace
+        if (currentPath.endsWith(linkPath) || 
+            (currentPath === '/' && linkPath === 'index.html') ||
+            (currentPath.endsWith('/index.html') && linkPath === 'index.html')) {
+            
+            link.classList.add('active');
+            
+            // Si el enlace está dentro de un dropdown, activar también el dropdown
+            const parentLi = link.closest('li.dropdown');
+            if (parentLi) {
+                parentLi.classList.add('active');
+                // También activar el enlace principal del dropdown
+                const dropdownLink = parentLi.querySelector(':scope > a');
+                if (dropdownLink) {
+                    dropdownLink.classList.add('active');
+                }
+            }
+            
+            console.log("Elemento activado:", linkPath);
+        }
+    });
+}
+
+// Cargar los fragmentos cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM cargado, iniciando carga de fragmentos");
+    
+    // Cargar la barra de navegación
+    const navbarContainer = document.getElementById('navbar-container');
+    if (navbarContainer) {
+        loadFragment('navbar-container', 'fragments/nav.html');
+    } else {
+        console.log("No se encontró el contenedor de la barra de navegación");
+    }
+    
+    // Cargar el pie de página
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        loadFragment('footer-container', 'fragments/footer.html');
+    } else {
+        console.log("No se encontró el contenedor del pie de página");
+    }
+});

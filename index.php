@@ -30,9 +30,9 @@
         <div class="spinner"></div>
     </div>
 
-    <!-- Navbar (cargado desde fragmento) -->
-    <div id="navbar-container"></div>
-
+    <!-- Navbar (incluido con PHP) -->
+    <?php include 'fragments/navbar.php'; ?>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="video-background">
@@ -247,6 +247,6 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/fragments.js"></script>
+    <!-- Ya no necesitas fragments.js -->
 </body>
 </html>
