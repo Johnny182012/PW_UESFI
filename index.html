@@ -31,7 +31,15 @@
     </div>
 
     <!-- Navbar (cargado desde fragmento) -->
-    <?php include 'fragments/menu.php'; ?>
+    <div id="navbar-container"></div>
+    <script>
+        // Cargar el fragmento de la navbar
+        fetch('fragments/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero">
