@@ -50,7 +50,7 @@ async function loadFragment(containerId, fragmentPath) {
         let html = await response.text();
         
         // Reemplazar la variable #ROOT_PATH# en el HTML con la ruta raíz calculada
-        html = html.replace(/#ROOT_PATH#/, rootPath);
+        html = html.replace(/#ROOT_PATH#/g, rootPath);
         
         // Insertar el HTML en el contenedor
         container.innerHTML = html;
