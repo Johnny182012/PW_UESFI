@@ -266,7 +266,57 @@
         fetch('../../fragments/nav.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
+                // Reemplazar las rutas relativas
+                let modifiedData = data.replace(/#ROOT_PATH#/g, '../../');
+                document.getElementById('navbar-container').innerHTML = modifiedData;
+                
+                // Inicializar el menú móvil después de cargar el fragmento
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdowns = document.querySelectorAll('.dropdown');
+                
+                // Toggle del menú móvil
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        this.classList.toggle('active');
+                        this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+                    });
+                }
+                
+                // Funcionalidad de dropdown en móvil
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    
+                    // En dispositivos móviles
+                    dropdownLink.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 992) {
+                            e.preventDefault();
+                            
+                            // Close other open dropdowns first
+                            dropdowns.forEach(otherDropdown => {
+                                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                                    otherDropdown.classList.remove('active');
+                                }
+                            });
+                            
+                            dropdown.classList.toggle('active');
+                            
+                            // Accesibilidad
+                            const expanded = dropdown.classList.contains('active');
+                            dropdownLink.setAttribute('aria-expanded', expanded);
+                        }
+                    });
+                });
+                
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', (e) => {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                });
             });
     </script>
 
@@ -427,7 +477,9 @@
         fetch('../../fragments/footer.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
+                // Reemplazar las rutas relativas
+                let modifiedData = data.replace(/#ROOT_PATH#/g, '../../');
+                document.getElementById('footer-container').innerHTML = modifiedData;
             });
     </script>
 
