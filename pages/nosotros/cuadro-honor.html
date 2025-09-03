@@ -15,54 +15,66 @@
 </head>
 
 <body>
-    <!-- Navbar (incluido directamente) -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="../../index.html" class="logo-link">
-                <img src="../../assets/images/logo/sf_logo_1_2.png" alt="Logo San Francisco" class="logo-img">
-            </a>
-        </div>
-
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-            <li><a href="../../index.html">Inicio</a></li>
-            <li class="dropdown active">
-                <a href="#">Nosotros <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/nosotros/historia.html">Historia</a></li>
-                    <li><a href="../../pages/nosotros/mision-vision.html">Misión y Visión</a></li>
-                    <li><a href="../../pages/nosotros/autoridades.html">Autoridades</a></li>
-                    <li><a href="../../pages/nosotros/cuadro-honor.html" class="active">Cuadro de Honor</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Estudiantes <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/estudiantes/admisiones.html">Admisiones</a></li>
-                    <li><a href="../../pages/estudiantes/actividades.html">Actividades</a></li>
-                    <li><a href="../../pages/estudiantes/calendario.html">Calendario</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Padres <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/padres/circulares.html">Circulares</a></li>
-                    <li><a href="../../pages/padres/tutorias.html">Tutorías</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Docentes <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="../../pages/docentes/plana-docente.html">Plana Docente</a></li>
-                    <li><a href="../../pages/docentes/recursos.html">Recursos</a></li>
-                    <li><a href="../../pages/docentes/capacitaciones.html">Capacitaciones</a></li>
-                </ul>
-            </li>
-            <li><a href="../../pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+     <!-- Navbar (cargado desde fragmento) -->
+    <div id="navbar-container"></div>
+    <script>
+        // Cargar el fragmento de la navbar
+        fetch('../../fragments/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                // Reemplazar las rutas relativas
+                let modifiedData = data.replace(/#ROOT_PATH#/g, '../../');
+                document.getElementById('navbar-container').innerHTML = modifiedData;
+                
+                // Inicializar el menú móvil después de cargar el fragmento
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdowns = document.querySelectorAll('.dropdown');
+                
+                // Toggle del menú móvil
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        this.classList.toggle('active');
+                        this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+                    });
+                }
+                
+                // Funcionalidad de dropdown en móvil
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    
+                    // En dispositivos móviles
+                    dropdownLink.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 992) {
+                            e.preventDefault();
+                            
+                            // Close other open dropdowns first
+                            dropdowns.forEach(otherDropdown => {
+                                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                                    otherDropdown.classList.remove('active');
+                                }
+                            });
+                            
+                            dropdown.classList.toggle('active');
+                            
+                            // Accesibilidad
+                            const expanded = dropdown.classList.contains('active');
+                            dropdownLink.setAttribute('aria-expanded', expanded);
+                        }
+                    });
+                });
+                
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', (e) => {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(e.target)) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                });
+            });
+    </script>
 
     <!-- Contenido Principal -->
     <main class="page-content">
