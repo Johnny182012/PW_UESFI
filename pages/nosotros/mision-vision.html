@@ -15,7 +15,6 @@
 
 <body>
     <!-- Navbar (cargado desde fragmento) -->
-    <!-- Navbar (cargado desde fragmento) -->
     <div id="navbar-container"></div>
     <script>
         // Cargar el fragmento de la navbar
@@ -221,10 +220,22 @@
     </a>
 
     <!-- Footer -->
+    <!-- Footer (cargado desde fragmento) -->
     <div id="footer-container"></div>
-    
+    <script>
+        // Cargar el fragmento del footer
+        fetch('../../fragments/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                // Reemplazar las rutas relativas
+                let modifiedData = data.replace(/#ROOT_PATH#/g, '../../');
+                document.getElementById('footer-container').innerHTML = modifiedData;
+            });
+    </script>
+
+    <!-- Scripts -->
     <script src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/fragments.js"></script>
+    <!-- Eliminando la referencia a fragments.js que causa el problema -->
 </body>
 
 </html>

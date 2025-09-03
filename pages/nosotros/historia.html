@@ -41,7 +41,6 @@
                 // Funcionalidad de dropdown en móvil
                 dropdowns.forEach(dropdown => {
                     const dropdownLink = dropdown.querySelector('a');
-                    const dropdownContent = dropdown.querySelector('.dropdown-content');
                     
                     // En dispositivos móviles
                     dropdownLink.addEventListener('click', function(e) {
@@ -155,11 +154,21 @@
     </a>
 
     <!-- Footer -->
-<div id="footer-container"></div>
+    <div id="footer-container"></div>
+    <script>
+        // Cargar el fragmento del footer
+        fetch('../../fragments/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                // Reemplazar las rutas relativas
+                let modifiedData = data.replace(/#ROOT_PATH#/g, '../../');
+                document.getElementById('footer-container').innerHTML = modifiedData;
+            });
+    </script>
 
     <!-- Scripts -->
     <script src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/fragments.js"></script>
+    <!-- Eliminando la referencia a fragments.js que causa el problema -->
 </body>
 
 </html>
