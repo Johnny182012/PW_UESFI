@@ -9,22 +9,17 @@
     <meta name="keywords"
         content="colegio, educación, Ibarra, San Francisco, unidad educativa, estudiantes, docentes, padres de familia">
     <title>Unidad Educativa San Francisco | Ibarra</title>
-
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="assets/images/logo/ESCUDO-UESF.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -40,47 +35,47 @@
                 // Reemplazar las rutas relativas
                 let modifiedData = data.replace(/#ROOT_PATH#/g, '');
                 document.getElementById('navbar-container').innerHTML = modifiedData;
-                
+
                 // Inicializar el menú móvil después de cargar el fragmento
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navLinks = document.querySelector('.nav-links');
                 const dropdowns = document.querySelectorAll('.dropdown');
-                
+
                 // Toggle del menú móvil
                 if (menuToggle) {
-                    menuToggle.addEventListener('click', function() {
+                    menuToggle.addEventListener('click', function () {
                         navLinks.classList.toggle('active');
                         this.classList.toggle('active');
                         this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
                     });
                 }
-                
+
                 // Funcionalidad de dropdown en móvil
                 dropdowns.forEach(dropdown => {
                     const dropdownLink = dropdown.querySelector('a');
                     const dropdownContent = dropdown.querySelector('.dropdown-content');
-                    
+
                     // En dispositivos móviles
-                    dropdownLink.addEventListener('click', function(e) {
+                    dropdownLink.addEventListener('click', function (e) {
                         if (window.innerWidth <= 992) {
                             e.preventDefault();
-                            
+
                             // Close other open dropdowns first
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
                                     otherDropdown.classList.remove('active');
                                 }
                             });
-                            
+
                             dropdown.classList.toggle('active');
-                            
+
                             // Accesibilidad
                             const expanded = dropdown.classList.contains('active');
                             dropdownLink.setAttribute('aria-expanded', expanded);
                         }
                     });
                 });
-                
+
                 // Close dropdowns when clicking outside
                 document.addEventListener('click', (e) => {
                     dropdowns.forEach(dropdown => {
@@ -171,7 +166,8 @@
                         <h4>Aulas Virtuales</h4>
                         <p>Plataforma educativa digital para complementar el aprendizaje presencial con recursos
                             interactivos y seguimiento personalizado.</p>
-                        <a href="https://estudiante.colegiosanfrancisco.edu.ec/" class="service-link">Acceder<i class="fas fa-arrow-right"></i></a>
+                        <a href="https://estudiante.colegiosanfrancisco.edu.ec/" class="service-link">Acceder<i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -183,7 +179,8 @@
                         <h4>Correo Institucional</h4>
                         <p>Comunicación oficial entre estudiantes, docentes y personal administrativo para mantener una
                             comunidad educativa conectada.</p>
-                        <a href="https://outlook.office365.com/mail/" class="service-link">Acceder <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://outlook.office365.com/mail/" class="service-link">Acceder <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -206,7 +203,8 @@
                         <h4>Sistema de Calificaciones</h4>
                         <p>Plataforma para el seguimiento académico donde padres y estudiantes pueden consultar
                             calificaciones y asistencia.</p>
-                        <a href="https://ppff.colegiosanfrancisco.edu.ec" class="service-link">Ingresar <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://ppff.colegiosanfrancisco.edu.ec" class="service-link">Ingresar <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -315,6 +313,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Eliminando la referencia a fragments.js que causa el problema -->
-    </body>
-    
-    </html>
+</body>
+
+</html>
