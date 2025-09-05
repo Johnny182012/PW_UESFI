@@ -1,10 +1,17 @@
 /san-francisco/
 ├── index.html
 ├── assets/
+│   ├── audio/
+│   │   └── himno.mp3
 │   ├── css/
+│   │   └── preloader.css
 │   │   └── styles.css
 │   ├── js/
+│   │   └── carousel.js
+│   │   └── counter.js
+│   │   └── fragments.js
 │   │   └── main.js
+│   │   └── preloader.js
 │   ├── images/
 │   │   ├── logo.png
 │   │   ├── hero-fallback.jpg
