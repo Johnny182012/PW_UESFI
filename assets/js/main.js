@@ -446,3 +446,74 @@ window.addEventListener('load', function() {
         }, 500);
     }
 });
+
+    // Popup Promocional
+    const promoPopup = document.getElementById('promo-popup');
+    const closePopup = document.getElementById('close-popup');
+    const promoImage = document.getElementById('promo-image');
+    const promoLink = document.getElementById('promo-link');
+    
+    // Configuración del popup (puedes modificar estos valores)
+    const popupConfig = {
+        imagePath: 'assets/images/popup/catequesis_09092025.jpg', // Ruta de la imagen promocional
+        linkUrl: '#', // URL a la que dirigirá al hacer clic
+        showOnce: true, // Si es true, solo se muestra una vez por sesión
+        delay: 1000, // Tiempo de espera antes de mostrar el popup (en milisegundos)
+        cookieDuration: 7 // Duración de la cookie en días (si showOnce es true)
+    };
+    
+    // Función para verificar si ya se mostró el popup
+    function hasPopupBeenShown() {
+        if (!popupConfig.showOnce) return false;
+        return localStorage.getItem('promoPopupShown') === 'true';
+    }
+    
+    // Función para marcar el popup como mostrado
+    function markPopupAsShown() {
+        if (popupConfig.showOnce) {
+            localStorage.setItem('promoPopupShown', 'true');
+            
+            // Si se especificó una duración de cookie, configurar para que expire
+            if (popupConfig.cookieDuration > 0) {
+                setTimeout(() => {
+                    localStorage.removeItem('promoPopupShown');
+                }, popupConfig.cookieDuration * 24 * 60 * 60 * 1000);
+            }
+        }
+    }
+    
+    // Mostrar el popup
+    function showPromoPopup() {
+        if (!hasPopupBeenShown()) {
+            // Configurar solo el enlace (no sobrescribir la imagen)
+            promoLink.href = popupConfig.linkUrl;
+            
+            // Mostrar el popup después del retraso configurado
+            setTimeout(() => {
+                promoPopup.classList.add('active');
+                markPopupAsShown();
+            }, popupConfig.delay);
+        }
+    }
+    
+    // Cerrar el popup
+    function closePromoPopup() {
+        promoPopup.classList.remove('active');
+    }
+    
+    // Event listeners
+    if (closePopup) {
+        closePopup.addEventListener('click', closePromoPopup);
+    }
+    
+    // También cerrar al hacer clic fuera del contenido
+    if (promoPopup) {
+        promoPopup.addEventListener('click', function(e) {
+            if (e.target === promoPopup) {
+                closePromoPopup();
+            }
+        });
+        
+        // Iniciar el popup
+        showPromoPopup();
+    }
